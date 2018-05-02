@@ -1,0 +1,2 @@
+# run Moondex-Sentinel every two minutes
+*/2 * * * * cd /home/YOURUSERNAME/moondex_sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
