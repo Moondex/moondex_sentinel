@@ -108,8 +108,6 @@ echo "Installing sentinel..."
 cd /root/.moondexcore
 sudo apt-get install -y git python-virtualenv
 
-sudo git clone https://github.com/moondexcoin/moondex_sentinel.git
-
 wget https://github.com/Moondex/moondex_sentinel/archive/master.zip
 unzip master.zip
 mv moondex_sentinel-master moondex_sentinel
