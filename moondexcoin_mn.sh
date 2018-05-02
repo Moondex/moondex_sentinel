@@ -13,13 +13,14 @@ sudo apt-get install git -y
 sudo apt-get install nano -y
 sudo apt-get install pwgen -y
 sudo apt-get install dnsutils -y
+sudo apt-get install zip unzip -y
 
 echo "Packages complete..."
 
 WALLET_VERSION='2.0.0.1'
 WANIP=$(dig +short myip.opendns.com @resolver1.opendns.com)
-PORT='17817'
-RPCPORT='17866'
+PORT='8906'
+RPCPORT='8960'
 PASSWORD=`pwgen -1 20 -n`
 if [ "x$PASSWORD" = "x" ]; then
     PASSWORD=${WANIP}-`date +%s`
@@ -103,6 +104,10 @@ cd /root/.moondexcore
 sudo apt-get install -y git python-virtualenv
 
 sudo git clone https://github.com/moondexcoin/moondex_sentinel.git
+
+wget https://github.com/Moondex/moondex_sentinel/archive/master.zip
+unzip master.zip
+mv moondex_sentinel-master moondex_sentinel
 
 cd moondex_sentinel
 
