@@ -14,6 +14,11 @@ sudo apt-get install nano -y
 sudo apt-get install pwgen -y
 sudo apt-get install dnsutils -y
 sudo apt-get install zip unzip -y
+sudo apt-get install libzmq3-dev -y
+sudo apt-get install libboost-all-dev -y
+sudo apt-get install libminiupnpc-dev -y
+sudo apt-get install build-essential  libssl-dev libminiupnpc-dev libevent-dev -y
+
 
 echo "Packages complete..."
 
