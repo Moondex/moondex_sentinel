@@ -45,11 +45,16 @@ free -h
 echo "SWAP setup complete..."
 #end optional swap section
 
-wget https://github.com/Moondex/MoonDEXCoin/releases/download/v${WALLET_VERSION}/linux-no-gui-v${WALLET_VERSION}.tar.gz
-
+#clean up previous moondex files
+~/moondex/moondex-cli stop
+sleep 20
+rm -rf .moondexcore
 rm -rf moondex
+
+wget https://github.com/Moondex/MoonDEXCoin/releases/download/v${WALLET_VERSION}/linux-no-gui-v${WALLET_VERSION}.tar.gz
 mkdir moondex
 tar -zxvf linux-no-gui-v${WALLET_VERSION}.tar.gz -C moondex
+rm linux-no-gui-v${WALLET_VERSION}.tar.gz
 
 echo "Loading and syncing wallet"
 
@@ -82,6 +87,7 @@ GENKEY=$(~/moondex/moondex-cli masternode genkey)
 echo "Mining info..."
 ~/moondex/moondex-cli getmininginfo
 ~/moondex/moondex-cli stop
+sleep 60
 
 echo "Creating final config..."
 
