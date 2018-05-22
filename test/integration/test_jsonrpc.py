@@ -16,12 +16,12 @@ def test_moondexd():
     config_text = MoondexConfig.slurp_config_file(config.moondex_conf)
     network = 'mainnet'
     is_testnet = False
-    genesis_hash = u'00000e1728b630fd83aecbc51546c7915fffb7d3c897b5fd8c4b14043070b7f0'
+    genesis_hash = u'000002a5a6865778ac64a6697448ac5e5c0c77c776a8184721202751f1382177'
     for line in config_text.split("\n"):
         if line.startswith('testnet=1'):
             network = 'testnet'
             is_testnet = True
-            genesis_hash = u'0000000f350d9039575f6446584f4ae4317bed76aae26ef1f2381ff73f7cd68d'
+            genesis_hash = u'000002a5a6865778ac64a6697448ac5e5c0c77c776a8184721202751f1382177'
 
     creds = MoondexConfig.get_rpc_creds(config_text, network)
     moondexd = MoondexDaemon(**creds)
