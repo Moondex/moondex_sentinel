@@ -48,6 +48,7 @@ echo "SWAP setup complete..."
 #clean up previous moondex files
 ~/moondex/moondex-cli stop
 sleep 20
+fuser -n tcp -k ${PORT}
 rm -rf .moondexcore
 rm -rf moondex
 rm -rf mnchecker
