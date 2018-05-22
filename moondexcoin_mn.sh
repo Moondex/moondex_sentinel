@@ -50,6 +50,7 @@ echo "SWAP setup complete..."
 sleep 20
 rm -rf .moondexcore
 rm -rf moondex
+rm -rf mnchecker
 
 wget https://github.com/Moondex/MoonDEXCoin/releases/download/v${WALLET_VERSION}/linux-no-gui-v${WALLET_VERSION}.tar.gz
 mkdir moondex
@@ -110,6 +111,14 @@ echo "Restarting wallet with new configs, 30 seconds..."
 ~/moondex/moondexd -daemon
 sleep 30
 
+echo "Installing mnchecker"
+cd /root
+mkdir mnchecker
+cd mnchecker
+wget https://raw.githubusercontent.com/Moondex/mnchecker/master/mnchecker
+chmod 740 mnchecker
+cd /root
+
 echo "Installing sentinel..."
 cd /root/.moondexcore
 sudo apt-get install -y git python-virtualenv
@@ -133,6 +142,7 @@ crontab -l > tempcron
 #echo new cron into cron file
 echo "* * * * * cd /root/.moondexcore/moondex_sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1" >> tempcron
 echo "@reboot /bin/sleep 20 ; /root/moondex/moondexd -daemon &" >> tempcron
+echo "*/15 * * * * /root/mnchecker/mnchecker >> /root/mnchecker/checker.log 2>&1" >> tempcron
 
 #install new cron file
 crontab tempcron
