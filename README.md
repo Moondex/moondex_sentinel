@@ -28,7 +28,7 @@ Make sure the local Moondex daemon running is at least version 2.0.0.1
 
 Clone the Sentinel repo and install Python dependencies.
 
-    $ git clone https://github.com/moondexcoin/moondex_sentinel.git && cd moondex_sentinel
+    $ git clone https://github.com/moondex/moondex_sentinel.git && cd moondex_sentinel
     $ virtualenv ./venv
     $ ./venv/bin/pip install -r requirements.txt
 
