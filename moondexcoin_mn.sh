@@ -22,7 +22,7 @@ sudo apt-get install build-essential  libssl-dev libminiupnpc-dev libevent-dev -
 
 echo "Packages complete..."
 
-WALLET_VERSION='2.0.0.1'
+WALLET_VERSION='2.0.1.1'
 WANIP=$(dig +short myip.opendns.com @resolver1.opendns.com)
 PORT='8906'
 RPCPORT='8960'
