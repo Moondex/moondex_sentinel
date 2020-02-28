@@ -53,10 +53,10 @@ rm -rf .moondexcore
 rm -rf moondex
 rm -rf mnchecker
 
-wget https://github.com/Moondex/MoonDEXCoin/releases/download/v${WALLET_VERSION}/linux-no-gui-v${WALLET_VERSION}.tar.gz
+wget https://github.com/Moondex/MoonDEXCoin/releases/download/v${WALLET_VERSION}/ubuntu16-linux-no-gui-v${WALLET_VERSION}.tar.gz
 mkdir moondex
-tar -zxvf linux-no-gui-v${WALLET_VERSION}.tar.gz -C moondex
-rm linux-no-gui-v${WALLET_VERSION}.tar.gz
+tar -zxvf ubuntu16-linux-no-gui-v${WALLET_VERSION}.tar.gz -C moondex
+rm ubuntu16-linux-no-gui-v${WALLET_VERSION}.tar.gz
 
 echo "Loading and syncing wallet"
 
