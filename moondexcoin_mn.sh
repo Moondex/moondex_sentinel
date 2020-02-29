@@ -106,19 +106,6 @@ externalip=$WANIP
 maxconnections=32
 masternode=1
 masternodeprivkey=$GENKEY
-addnode=140.82.48.96:8906
-addnode=207.148.102.250:8906
-addnode=139.162.238.190:8906
-addnode=104.236.208.223:8906
-addnode=207.154.252.125:8906
-addnode=45.77.205.193:8906
-addnode=45.63.114.37:8906
-addnode=149.28.161.1:8906
-addnode=199.247.14.215:8906
-addnode=140.82.25.118:8906
-addnode=147.135.247.146:8906
-addnode=45.76.36.17:8906
-addnode=188.40.174.163:8906
 EOF
 
 echo "Restarting wallet with new configs, 30 seconds..."
