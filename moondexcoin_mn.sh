@@ -23,7 +23,7 @@ sudo apt-get install build-essential  libssl-dev libminiupnpc-dev libevent-dev -
 echo "Packages complete..."
 
 WALLET_VERSION='3.0'
-WANIP=$(dig +short myip.opendns.com @resolver1.opendns.com)
+WANIP=$(curl -4 icanhazip.com)
 PORT='8906'
 RPCPORT='8960'
 PASSWORD=`pwgen -1 20 -n`
