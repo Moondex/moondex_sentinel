@@ -22,7 +22,7 @@ sudo apt-get install build-essential  libssl-dev libminiupnpc-dev libevent-dev -
 
 echo "Packages complete..."
 
-WALLET_VERSION='3.0'
+WALLET_VERSION='3.1'
 WANIP=$(curl -4 icanhazip.com)
 PORT='8906'
 RPCPORT='8960'
